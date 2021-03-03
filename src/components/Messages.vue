@@ -12,7 +12,6 @@ export default { name: 'Messages' };
 
 <style>
 .md-card{
-  background: white;
-  height: 400px;
+  height: 600px;
 }
 </style>

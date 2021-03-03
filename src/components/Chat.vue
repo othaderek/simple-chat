@@ -7,17 +7,20 @@
             </md-app-toolbar>
           </md-app>
       <Messages />
+      <MessageForm />
       </div>
   </div>
 </template>
 
 <script>
 import Messages from './Messages.vue';
+import MessageForm from './MessageForm.vue';
 
 export default {
   name: 'Chat',
   components: {
     Messages,
+    MessageForm,
   },
 };
 </script>
