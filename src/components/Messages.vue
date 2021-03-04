@@ -1,8 +1,49 @@
 <template>
   <div class="md-layout-item md-alignment-center-center">
-      <md-card class="md-size-80">
-        <div></div>
-      </md-card>
+      <md-content class="md-size-80 chat-box md-scrollbar">
+        <div>hi</div>
+        <div>hi</div>
+        <div>hi</div>
+        <div>hi</div>
+        <div>hi</div>
+        <div>hi</div>
+        <div>hi</div>
+        <div>hi</div>
+        <div>hi</div>
+        <div>hi</div>
+        <div>hi</div>
+        <div>hi</div>
+        <div>hi</div>
+        <div>hi</div>
+        <div>hi</div>
+        <div>hi</div>
+        <div>hi</div>
+        <div>hi</div>
+        <div>hi</div>
+        <div>hi</div>
+        <div>hi</div>
+        <div>hi</div>
+        <div>hi</div>
+        <div>hi</div>
+        <div>hi</div>
+        <div>hi</div>
+        <div>hi</div>
+        <div>hi</div>
+        <div>hi</div>
+        <div>hi</div>
+        <div>hi</div>
+        <div>hi</div>
+        <div>hi</div>
+        <div>hi</div>
+        <div>hi</div>
+        <div>hi</div>
+        <div>hi</div>
+        <div>hi</div>
+        <div>hi</div>
+        <div>hi</div>
+        <div>hi</div>
+        <div>hi</div>
+      </md-content>
   </div>
 </template>
 
@@ -11,7 +52,11 @@ export default { name: 'Messages' };
 </script>
 
 <style>
-.md-card{
+.chat-box{
+  justify-content: left;
+}
+.md-content{
   height: 600px;
+  overflow: auto;
 }
 </style>

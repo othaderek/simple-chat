@@ -1,5 +1,5 @@
 <template>
-  <div class="md-layout md-alignment-center-center">
+  <div class="chat md-layout md-alignment-center-center">
       <div class="md-layout-item md-size-80">
           <md-app>
             <md-app-toolbar class="md-primary">
@@ -26,6 +26,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .md-app {
     max-height: 400px;
     border: 1px solid rgba(#000, .12);
