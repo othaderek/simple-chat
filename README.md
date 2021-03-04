@@ -1,24 +1,6 @@
 # simple-chat
+This is a simple chat application that uses a socket.io and express powered server to send live messages to different clients.
 
-## Project setup
-```
-npm install
-```
+It is styled using Material UI components for simplicity.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+![Chat](./assets/chat.png)

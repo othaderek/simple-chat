@@ -47,42 +47,12 @@ export default {
         },
         {
           id: 2,
-          body: 'Hello',
+          body: 'Hi?',
           user: 'othaderek',
         },
         {
           id: 3,
-          body: 'Sup',
-          user: 'othaderek',
-        },
-        {
-          id: 4,
-          body: 'Hello',
-          user: 'othaderek',
-        },
-        {
-          id: 5,
-          body: 'Hello',
-          user: 'othaderek',
-        },
-        {
-          id: 6,
-          body: 'Hello',
-          user: 'othaderek',
-        },
-        {
-          id: 7,
-          body: 'Hello',
-          user: 'othaderek',
-        },
-        {
-          id: 1,
-          body: 'Hello',
-          user: 'othaderek',
-        },
-        {
-          id: 8,
-          body: 'Hello',
+          body: 'Anybody else in here?',
           user: 'othaderek',
         },
       ],
