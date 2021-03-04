@@ -1,54 +1,94 @@
 <template>
   <div class="md-layout-item md-alignment-center-center">
       <md-content class="md-size-80 chat-box md-scrollbar">
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
-        <div>hi</div>
+        <md-list class="md-double-line message">
+          <md-list-item
+          v-for="message in messages"
+          v-bind:key="message.key"
+          v-bind:body="message.body">{{message.body}}</md-list-item>
+        </md-list>
       </md-content>
+      <md-field>
+        <label>Enter Message</label>
+        <md-input v-model="newMessage"
+         v-on:keyup.enter="addToMessages($event)"
+         value="newMessage"></md-input>
+      </md-field>
   </div>
 </template>
 
 <script>
-export default { name: 'Messages' };
+import Message from './Message.vue';
+
+export default {
+  name: 'Messages',
+  components: [
+    Message,
+  ],
+  methods: {
+    addToMessages(e) {
+      console.log(e);
+      console.log('test');
+      this.messages = [...this.messages, { body: this.newMessage }];
+      this.clearInput();
+    },
+    clearInput() {
+      this.newMessage = '';
+    },
+  },
+  data() {
+    return {
+      newMessage: '',
+      messages: [
+        {
+          id: 1,
+          body: 'Hello',
+          user: 'othaderek',
+        },
+        {
+          id: 2,
+          body: 'Hello',
+          user: 'othaderek',
+        },
+        {
+          id: 3,
+          body: 'Sup',
+          user: 'othaderek',
+        },
+        {
+          id: 4,
+          body: 'Hello',
+          user: 'othaderek',
+        },
+        {
+          id: 5,
+          body: 'Hello',
+          user: 'othaderek',
+        },
+        {
+          id: 6,
+          body: 'Hello',
+          user: 'othaderek',
+        },
+        {
+          id: 7,
+          body: 'Hello',
+          user: 'othaderek',
+        },
+        {
+          id: 1,
+          body: 'Hello',
+          user: 'othaderek',
+        },
+        {
+          id: 8,
+          body: 'Hello',
+          user: 'othaderek',
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <style>
@@ -58,5 +98,8 @@ export default { name: 'Messages' };
 .md-content{
   height: 600px;
   overflow: auto;
+}
+.md-list-item{
+  height: 50px;
 }
 </style>
