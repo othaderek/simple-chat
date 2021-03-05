@@ -25,11 +25,21 @@ export default {
   components: [
     Message,
   ],
+  mounted() {
+    this.$socket.on('message', (msg) => {
+      this.sockets.message(msg);
+    });
+  },
+  sockets: {
+    message(msg) {
+      console.log(msg);
+      this.messages = [...this.messages, msg];
+    },
+  },
   methods: {
-    addToMessages(e) {
-      console.log(e);
-      console.log('test');
-      this.messages = [...this.messages, { body: this.newMessage }];
+    addToMessages() {
+      const msgObj = { body: this.newMessage };
+      this.$socket.emit('message', msgObj);
       this.clearInput();
     },
     clearInput() {
